@@ -5,16 +5,9 @@ import {
   ThemeProvider as NextThemesProvider,
 } from "next-themes";
 
-import Navbar from "@/components/navigation/navbar";
-
 export default function ThemeProvider({
   children,
   ...props
 }: ThemeProviderProps) {
-  return (
-    <NextThemesProvider {...props}>
-      <Navbar />
-      {children}
-    </NextThemesProvider>
-  );
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 }
