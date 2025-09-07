@@ -4,6 +4,7 @@ import ROUTES from "@/constants/routes";
 import LocalSearch from "@/components/search/LocalSearch";
 import HomeFilter from "@/components/filters/HomeFilter";
 import { Button } from "@/components/ui/button";
+import QuestionCard from "@/components/cards/QuestionCard";
 
 const questions = [
   {
@@ -23,6 +24,8 @@ const questions = [
     author: {
       _id: "1",
       name: "John Doe",
+      image:
+        "https://t4.ftcdn.net/jpg/11/66/06/77/360_F_1166067709_2SooAuPWXp20XkGev7oOT7nuK1VThCsN.jpg",
     },
     upvotes: 10,
     answers: 5,
@@ -42,6 +45,8 @@ const questions = [
     author: {
       _id: "1",
       name: "Jane Doe",
+      image:
+        "https://img.freepik.com/free-vector/smiling-redhaired-boy-illustration_1308-176664.jpg?semt=ais_incoming&w=740&q=80",
     },
     upvotes: 3,
     answers: 10,
@@ -91,7 +96,7 @@ const Home = async ({ searchParams }: SearchParams) => {
       <HomeFilter />
       <div className="mt-10 flex w-full flex-col gap-6">
         {filteredQuestions.map((question) => (
-          <h1 key={question._id}>{question.title}</h1>
+          <QuestionCard key={question._id} question={question} />
         ))}
       </div>
     </>
