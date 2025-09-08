@@ -82,7 +82,7 @@ const QuestionForm = () => {
     }
   };
 
-  const handleCreateQuestion = (data:z.infer AskQuestionSchema>) => {};
+  const handleCreateQuestion = (data: z.infer<AskQuestionSchema>) => {};
 
   return (
     <Form {...form}>
