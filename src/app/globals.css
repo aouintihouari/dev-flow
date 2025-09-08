@@ -1,11 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-/*
-  ---break---
-*/
-@custom-variant dark (&:is(.dark *));
-
 @plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
 
 @variant dark (&:is(.dark *));
 
@@ -656,7 +653,6 @@
     overflow-y: auto !important;
   }
 
-  /* NESTED CODE BLOCKS: Only apply grid to visible code blocks */
   [data-bright-mode="dark"]:not(html.light [data-bright-mode="dark"]),
   [data-bright-mode="light"]:not(:not(html.light [data-bright-mode="light"])) {
     display: grid !important;
@@ -734,4 +730,351 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+.mdxeditor-editor h1,
+.mdxeditor h1,
+.mdxeditor-editor [data-heading-level="1"],
+.mdxeditor [data-heading-level="1"],
+.mdxeditor-editor .title[data-lexical-text="true"],
+div[contenteditable="true"] h1 {
+  font-size: 2em !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin: 0.67em 0 !important;
+  display: block !important;
+}
+
+.mdxeditor-editor h2,
+.mdxeditor h2,
+.mdxeditor-editor [data-heading-level="2"],
+.mdxeditor [data-heading-level="2"],
+div[contenteditable="true"] h2 {
+  font-size: 1.5em !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  margin: 0.83em 0 !important;
+  display: block !important;
+}
+
+.mdxeditor-editor h3,
+.mdxeditor h3,
+.mdxeditor-editor [data-heading-level="3"],
+.mdxeditor [data-heading-level="3"],
+div[contenteditable="true"] h3 {
+  font-size: 1.25em !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  margin: 1em 0 !important;
+  display: block !important;
+}
+
+.mdxeditor-editor h4,
+.mdxeditor h4,
+div[contenteditable="true"] h4 {
+  font-size: 1.1em !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  margin: 1.33em 0 !important;
+  display: block !important;
+}
+
+.mdxeditor-editor h5,
+.mdxeditor h5,
+div[contenteditable="true"] h5 {
+  font-size: 0.9em !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  margin: 1.67em 0 !important;
+  display: block !important;
+}
+
+.mdxeditor-editor h6,
+.mdxeditor h6,
+div[contenteditable="true"] h6 {
+  font-size: 0.8em !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  margin: 2.33em 0 !important;
+  display: block !important;
+}
+
+.mdxeditor-editor h1,
+.mdxeditor-editor h2,
+.mdxeditor-editor h3,
+.mdxeditor-editor h4,
+.mdxeditor-editor h5,
+.mdxeditor-editor h6 {
+  color: var(--color-dark-100) !important;
+}
+
+.dark .mdxeditor-editor h1,
+.dark .mdxeditor-editor h2,
+.dark .mdxeditor-editor h3,
+.dark .mdxeditor-editor h4,
+.dark .mdxeditor-editor h5,
+.dark .mdxeditor-editor h6,
+.dark .mdxeditor h1,
+.dark .mdxeditor h2,
+.dark .mdxeditor h3,
+.dark .mdxeditor h4,
+.dark .mdxeditor h5,
+.dark .mdxeditor h6 {
+  color: var(--color-light-900) !important;
+}
+
+.mdxeditor-editor .heading {
+  display: block !important;
+  font-weight: 700 !important;
+}
+
+[data-lexical-editor="true"] h1,
+[data-lexical-editor="true"] h2,
+[data-lexical-editor="true"] h3,
+[data-lexical-editor="true"] h4,
+[data-lexical-editor="true"] h5,
+[data-lexical-editor="true"] h6 {
+  display: block !important;
+  font-weight: 700 !important;
+}
+
+[data-lexical-editor="true"] h1 {
+  font-size: 2em !important;
+}
+
+[data-lexical-editor="true"] h2 {
+  font-size: 1.5em !important;
+}
+
+[data-lexical-editor="true"] h3 {
+  font-size: 1.25em !important;
+}
+
+.mdxeditor-editor .paragraph-regular,
+.mdxeditor-editor .paragraph-medium,
+.mdxeditor-editor .paragraph-semibold {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+.background-light800_dark200 h1,
+.background-light800_dark200 h2,
+.background-light800_dark200 h3,
+.background-light800_dark200 h4,
+.background-light800_dark200 h5,
+.background-light800_dark200 h6 {
+  font-weight: 700 !important;
+}
+
+/* === STYLES POUR LES LISTES === */
+.mdxeditor-editor ul,
+.mdxeditor ul,
+[data-lexical-editor="true"] ul {
+  list-style-type: disc !important;
+  margin: 1em 0 !important;
+  padding-left: 2em !important;
+  display: block !important;
+}
+
+.mdxeditor-editor ol,
+.mdxeditor ol,
+[data-lexical-editor="true"] ol {
+  list-style-type: decimal !important;
+  margin: 1em 0 !important;
+  padding-left: 2em !important;
+  display: block !important;
+}
+
+.mdxeditor-editor li,
+.mdxeditor li,
+[data-lexical-editor="true"] li {
+  display: list-item !important;
+  margin: 0.5em 0 !important;
+  padding-left: 0.5em !important;
+  list-style-position: outside !important;
+}
+
+/* === STYLES POUR LES CHECKBOXES === */
+.mdxeditor-editor input[type="checkbox"],
+.mdxeditor input[type="checkbox"],
+[data-lexical-editor="true"] input[type="checkbox"] {
+  appearance: auto !important;
+  -webkit-appearance: checkbox !important;
+  -moz-appearance: checkbox !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 8px 0 0 !important;
+  padding: 0 !important;
+  display: inline-block !important;
+  position: relative !important;
+  top: 2px !important;
+  cursor: pointer !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 1 !important;
+}
+
+/* === STYLES SPÉCIFIQUES POUR LES CHECKBOXES COCHÉES === */
+.mdxeditor-editor input[type="checkbox"]:checked,
+.mdxeditor input[type="checkbox"]:checked,
+[data-lexical-editor="true"] input[type="checkbox"]:checked {
+  background-color: #dc2626 !important; /* Rouge */
+  border-color: #dc2626 !important; /* Bordure rouge */
+  color: #000000 !important; /* Checkmark noir */
+  accent-color: #dc2626 !important;
+}
+
+/* Fallback pour les navigateurs qui ne supportent pas accent-color */
+.mdxeditor-editor input[type="checkbox"]:checked::after,
+.mdxeditor input[type="checkbox"]:checked::after,
+[data-lexical-editor="true"] input[type="checkbox"]:checked::after {
+  content: "✓" !important;
+  color: #000000 !important; /* Checkmark noir */
+  font-weight: bold !important;
+  font-size: 12px !important;
+  position: absolute !important;
+  top: -2px !important;
+  left: 2px !important;
+}
+
+/* Styles pour les éléments de liste avec checkbox */
+.mdxeditor-editor .list-item-checkbox,
+.mdxeditor .list-item-checkbox,
+[data-lexical-editor="true"] .list-item-checkbox {
+  display: flex !important;
+  align-items: flex-start !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.mdxeditor-editor .list-item-checkbox input,
+.mdxeditor .list-item-checkbox input {
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+  margin-top: 2px !important;
+}
+
+/* Liste de tâches (task list) */
+.mdxeditor-editor ul[data-lexical-list-type="check"],
+.mdxeditor ul[data-lexical-list-type="check"],
+[data-lexical-editor="true"] ul[data-lexical-list-type="check"] {
+  list-style: none !important;
+  padding-left: 1.5em !important;
+}
+
+.mdxeditor-editor ul[data-lexical-list-type="check"] li,
+.mdxeditor ul[data-lexical-list-type="check"] li,
+[data-lexical-editor="true"] ul[data-lexical-list-type="check"] li {
+  position: relative !important;
+  list-style: none !important;
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+/* === CORRECTION DES CONFLITS AVEC TAILWIND === */
+.mdxeditor-editor ul,
+.mdxeditor-editor ol,
+.mdxeditor-editor li {
+  all: revert !important;
+  color: inherit !important;
+  background: transparent !important;
+}
+
+/* Forcer l'affichage des puces */
+.mdxeditor-editor ul li::marker,
+.mdxeditor ul li::marker {
+  color: inherit !important;
+  font-size: 1em !important;
+}
+
+.mdxeditor-editor ol li::marker,
+.mdxeditor ol li::marker {
+  color: inherit !important;
+  font-size: 1em !important;
+}
+
+/* === STYLES POUR LES THÈMES === */
+/* Thème clair */
+.mdxeditor-editor ul,
+.mdxeditor-editor ol,
+.mdxeditor-editor li {
+  color: var(--color-dark-100) !important;
+}
+
+.mdxeditor-editor input[type="checkbox"] {
+  border-color: var(--color-light-400) !important;
+}
+
+/* Thème sombre */
+.dark .mdxeditor-editor ul,
+.dark .mdxeditor-editor ol,
+.dark .mdxeditor-editor li {
+  color: var(--color-light-900) !important;
+}
+
+.dark .mdxeditor-editor input[type="checkbox"] {
+  border-color: var(--color-light-500) !important;
+  background-color: var(--color-dark-300) !important;
+}
+
+/* Styles spécifiques pour les checkboxes cochées en mode sombre */
+.dark .mdxeditor-editor input[type="checkbox"]:checked,
+.dark .mdxeditor input[type="checkbox"]:checked,
+.dark [data-lexical-editor="true"] input[type="checkbox"]:checked {
+  background-color: #dc2626 !important; /* Rouge */
+  border-color: #dc2626 !important; /* Bordure rouge */
+  color: #000000 !important; /* Checkmark noir */
+  accent-color: #dc2626 !important;
+}
+
+.background-light800_dark200 ul,
+.background-light800_dark200 ol {
+  margin-left: 0 !important;
+  padding-left: 2em !important;
+}
+
+.background-light800_dark200 li {
+  margin-left: 0 !important;
+}
+
+/* Empêcher les classes Tailwind d'interférer */
+.markdown-editor ul,
+.markdown-editor ol,
+.markdown-editor li {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Assurer la visibilité des checkboxes */
+.markdown-editor input[type="checkbox"],
+.dark-editor input[type="checkbox"] {
+  display: inline-block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* === CORRECTION POUR LES NESTED LISTS === */
+.mdxeditor-editor ul ul,
+.mdxeditor-editor ol ol,
+.mdxeditor-editor ul ol,
+.mdxeditor-editor ol ul {
+  margin: 0.5em 0 !important;
+  padding-left: 2em !important;
+}
+
+.mdxeditor-editor ul ul {
+  list-style-type: circle !important;
+}
+
+.mdxeditor-editor ul ul ul {
+  list-style-type: square !important;
+}
+
+li[role="checkbox"]::before {
+  margin-left: -15px;
+  margin-top: 5px;
 }
