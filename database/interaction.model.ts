@@ -7,6 +7,8 @@ export interface IInteraction {
   actionType: "question" | "answer";
 }
 
+export type IInteractionDoc = IInteraction & Document;
+
 const InteractionSchema = new Schema<IInteraction>(
   {
     user: {

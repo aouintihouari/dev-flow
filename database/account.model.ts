@@ -9,6 +9,8 @@ export interface IAccount {
   password?: string;
 }
 
+export type IAccountDoc = IAccount & Document;
+
 const AccountSchema = new Schema<IAccount>(
   {
     userId: {

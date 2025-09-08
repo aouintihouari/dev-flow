@@ -5,6 +5,8 @@ export interface ICollection {
   question: Types.ObjectId;
 }
 
+export type ICollectionDoc = ICollection & Document;
+
 const CollectionSchema = new Schema<ICollection>(
   {
     author: {

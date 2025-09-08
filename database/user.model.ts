@@ -11,6 +11,8 @@ export interface IUser {
   reputation?: number;
 }
 
+export type IUserDoc = IUser & Document;
+
 const UserSchema = new Schema<IUser>(
   {
     name: {
