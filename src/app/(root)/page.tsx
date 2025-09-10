@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import QuestionCard from "@/components/cards/QuestionCard";
 import { ValidationError } from "@/lib/http-errors";
 import handleError from "@/lib/handlers/error";
-import dbConnect from "@/lib/mongoose";
 
 const questions = [
   {
