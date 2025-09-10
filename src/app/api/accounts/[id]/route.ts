@@ -40,7 +40,15 @@ export async function DELETE(
     const account = await Account.findByIdAndDelete(id);
     if (!account) throw new NotFoundError("Account");
 
-    return NextResponse.json({ success: true, data: account }, { status: 200 });
+    return NextResponse.json(
+      {
+        success: true,
+        data: account,
+      },
+      {
+        status: 200,
+      },
+    );
   } catch (err) {
     return handleError(err, "api") as APIErrorResponse;
   }
